@@ -22,7 +22,7 @@ public class Bullet {
         this.x = 0.0f;
         this.y = 0.0f;
         this.speed = 0.0f;
-        System.out.print("Creating Bullet with spriteId: " + spriteId);
+        System.out.print("Creating Bullet with spriteId: " + spriteId );
     }
 
     public void init(float startX, float startY, float speed) {

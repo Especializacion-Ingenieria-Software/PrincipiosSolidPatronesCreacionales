@@ -6,12 +6,14 @@ public class objectPoolExample {
 
     public static void main(String[] args) {
         // Creamos un pool de balas con un máximo de 5
-        BulletPool pool = new BulletPool(5);
+        BulletPool pool = new BulletPool(3);
 
         // "Disparamos" 3 balas
         Bullet b1 = pool.acquireBullet("bulletSprite");
         Bullet b2 = pool.acquireBullet("bulletSprite");
         Bullet b3 = pool.acquireBullet("bulletSprite");
+
+        System.out.println(" hash code: b1 " + b1.hashCode() + ", b2 " + b2.hashCode() + ", b3 " + b3.hashCode());
 
         // Inicializamos sus posiciones y velocidades
         if (b1 != null) b1.init(50, 300, 5);
@@ -31,6 +33,7 @@ public class objectPoolExample {
 
         // Adquirimos otra bala (se reutilizará la liberada recién)
         Bullet b4 = pool.acquireBullet("bulletSprite");
+        System.out.println(" hash code: b4 " + b1.hashCode() );
         if (b4 != null) {
             b4.init(70, 300, 5);
             b4.update();
