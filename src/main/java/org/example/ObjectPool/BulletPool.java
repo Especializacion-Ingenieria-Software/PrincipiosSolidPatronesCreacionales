@@ -1,7 +1,10 @@
 package org.example.ObjectPool;
+import java.util.Queue;
+import java.util.LinkedList;
+
 
 public class BulletPool {
-    private final java.util.Queue<Bullet> availableBullets = new java.util.LinkedList<>();
+    private final Queue<Bullet> availableBullets = new LinkedList<>();
 
     private int bulletCount = 0;
     private final int MAX_BULLETS;

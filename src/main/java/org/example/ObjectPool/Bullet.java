@@ -8,7 +8,7 @@ package org.example.ObjectPool;
  * puede causar overhead en memoria y CPU. Por eso, es útil reutilizar instancias.
  */
 
-public class Bullet {
+public class Bullet implements Poolable {
 
     private boolean active;
     private float x;
@@ -25,6 +25,7 @@ public class Bullet {
         System.out.print("Creating Bullet with spriteId: " + spriteId );
     }
 
+    @Override
     public void init(float startX, float startY, float speed) {
         this.x = startX;
         this.y = startY;
@@ -33,6 +34,7 @@ public class Bullet {
         System.out.println(">> Bullet  initialized in (" + x + ", " + y + ") with speed" + speed);
     }
 
+    @Override
     public void update() {
         if(active) {
 
@@ -46,12 +48,14 @@ public class Bullet {
         }
     }
 
+    @Override
     public void deactivate() {
         this.active = false;
         System.out.println(">> Bullet " + spriteId + " deactivated and ready to reuse.");
 
     }
 
+    @Override
     public boolean isActive() {
         return active;
     }
