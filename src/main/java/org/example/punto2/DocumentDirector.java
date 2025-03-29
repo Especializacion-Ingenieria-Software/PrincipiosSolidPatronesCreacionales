@@ -13,6 +13,7 @@ public class DocumentDirector  {
         this.builder = builder;
     };
 
+    /*
     public void buildXLSX(){
         builder.setTitle(new Title("ArialXLSX", 10,"TituloXLSX" ));
         builder.setStyle(new Style("RojoXLSX", "fontXLSX"));
@@ -22,8 +23,9 @@ public class DocumentDirector  {
         columns.add(column);
         builder.setColumn(columns);
     };
+    */
 
-
+    /*
     public void buildXML(){
         builder.setTitle(new Title("ArialXML", 10,"TituloXML" ));
         builder.setStyle(new Style("RojoXML", "fontXMML"));
@@ -34,7 +36,10 @@ public class DocumentDirector  {
         builder.setColumn(columns);
     };
 
+     */
 
+
+    /*
     public void buildDOCX(){
         builder.setTitle(new Title("ArialDOCX", 10,"TituloDOCX" ));
         builder.setStyle(new Style("RojoDOCX", "fontDOCX"));
@@ -44,6 +49,7 @@ public class DocumentDirector  {
         columns.add(column);
         builder.setColumn(columns);
     };
+     */
 
 
 }
